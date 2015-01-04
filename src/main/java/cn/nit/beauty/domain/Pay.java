@@ -37,4 +37,13 @@ public class Pay {
     public void setTradeno(String tradeno) {
         this.tradeno = tradeno;
     }
+
+    @Override
+    public String toString() {
+        return "Pay{" +
+                "userid='" + userid + '\'' +
+                ", fee='" + fee + '\'' +
+                ", tradeno='" + tradeno + '\'' +
+                '}';
+    }
 }

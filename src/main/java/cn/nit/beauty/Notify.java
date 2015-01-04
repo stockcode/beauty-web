@@ -35,6 +35,7 @@ public class Notify extends ActionSupport {
 
         Pay pay = new Pay(id, type, tradeno);
 
+        LOG.info(pay.toString());
         HttpResponse<String> result = null;
         try {
             result = Unirest
