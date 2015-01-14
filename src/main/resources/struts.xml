@@ -12,6 +12,10 @@
 
         <default-action-ref name="index" />
 
+        <action name="userguide" class="cn.nit.beauty.AboutAction" >
+            <result>/WEB-INF/jsp/userguide.jsp</result>
+        </action>
+
         <action name="about" class="cn.nit.beauty.AboutAction" >
             <result>/WEB-INF/jsp/about.jsp</result>
         </action>
