@@ -10,6 +10,8 @@ import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by gengke on 2014/12/28.
@@ -17,6 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 public class Notify extends ActionSupport {
 
     Gson gson = new Gson();
+
+    static List<String> tradeList = new ArrayList<String>();
 
     public String execute() throws Exception {
         ActionContext cxt = ActionContext.getContext();
@@ -26,6 +30,12 @@ public class Notify extends ActionSupport {
         String type = request.getParameter("type");
         String tradeno = request.getParameter("tradeno");
 
+        if (tradeList.contains(tradeno)) {
+            LOG.info(tradeno + " already exists, must be skipped.");
+            return SUCCESS;
+        }
+
+        tradeList.add(tradeno);
 
         Unirest.setDefaultHeader("X-Bmob-Application-Id",
                 "19fee4b5da44fc283e4c58e9f860ea96");
@@ -43,9 +53,10 @@ public class Notify extends ActionSupport {
 
             String resp = result.getBody();
 
-            System.err.println(resp);
+            LOG.info(resp);
+
         } catch (UnirestException e) {
-            e.printStackTrace();
+            LOG.error(e.getMessage());
         }
 
 
