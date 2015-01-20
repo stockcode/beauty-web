@@ -125,7 +125,8 @@
         <img src="<s:url value='/img/logo.png'/>" class="zk_logo" />
     </div>
     <div class="zk_introduce line-height">
-        <p>丽图是国内最受欢迎的个性化定制阅读平台,将资讯、报纸、杂志、图片、微博、微信等众多内容，按照用户意愿聚合到一起，实现深度个性化定制，并拥有强大的互动分享功能。支持iPad<span class="red">/</span>iPhone<span class="red">/</span>Android<span class="red">/</span>Android Tablet<span class="red">/</span>Windows Phone<span class="red">/</span>Windows 8</p>
+        <p>喜欢上了美腿，喜欢上了丝袜，喜欢上了高跟鞋，喜欢上了…丽图给您纯净的同好欣赏，千余国内外著名美腿性感模特大荟萃，千名模特万张图片每日大量更新奉送，更有签约模特原创自拍每日更新。用简洁独特的功能给您最纯净享受。
+        </p>
 
         上海麦磁信息技术有限公司
         <br />
